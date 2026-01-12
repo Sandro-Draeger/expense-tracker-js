@@ -1,0 +1,250 @@
+/* ==== RESET MODERNO ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ==== CORES NOVAS ==== 
+   Light Theme: tons futuristas pastel (lavanda e menta)
+   Dark Theme: roxo escuro com contraste neon suave
+========================================================= */
+body {
+  background-color: #eae7ff;
+  color: #1f1b2e;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  background-color: #181424;
+  color: #eae7ff;
+}
+
+/* ==== CONTAINER ==== */
+.app-container {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  margin-top: 20px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-theme .app-container {
+  background-color: #211b31;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+/* ==== HEADER ==== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+header h1 {
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+header button {
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 6px;
+  transition: transform 0.2s;
+}
+
+header button:hover {
+  transform: scale(1.1);
+}
+
+/* Container dos dois elementos */
+.top-bar {
+  display: flex;
+  justify-content: space-between; /* um à esquerda, outro à direita */
+  align-items: center;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ===== DATA ===== */
+.data-hora {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* ===== TEMPO ===== */
+#weather {
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+/* === Ajuste para Dark Mode === */
+body.dark-theme .data-hora {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  opacity: 0.8;
+}
+
+/* ==== FORM ==== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+form input,
+form select {
+  padding: 13px;
+  border-radius: 14px;
+  border: 1px solid #c4bff6;
+  font-size: 1rem;
+  background-color: #f7f6ff;
+  transition: border-color 0.2s, background-color 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  outline: none;
+  border-color: #8b83f8;
+  background-color: #fff;
+}
+
+body.dark-theme form input,
+body.dark-theme form select {
+  background-color: #2a2241;
+  border: 1px solid #624fbf;
+  color: #eae7ff;
+}
+
+/* ==== BOTÃO PRINCIPAL ==== */
+form button {
+  padding: 13px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b83f8, #55e7c4);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+form button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.filtro {
+  text-align: center;
+  width: 100;
+}
+
+.lista-section li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background-color: #f1efff;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.15s;
+}
+
+body.dark-theme .lista-section li {
+  background-color: #2d2642;
+}
+
+.lista-section li:hover {
+  transform: translateY(-1px);
+}
+
+li span.descricao {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+li span.valor {
+  color: #8b83f8;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+body.dark-theme li span.valor {
+  color: #55e7c4;
+}
+
+li .categoria {
+  font-size: 0.75rem;
+  opacity: 0.65;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 5px;
+  padding: 3px;
+  border: none;
+  cursor: default;
+}
+
+/* === ICONES/BOTÕES === */
+li button {
+  margin: 0;
+  padding: 4px 4px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 0.85rem;
+  color: inherit;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+li button:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+li button:first-of-type {
+  color: #8b83f8;
+}
+li button:last-of-type {
+  color: #f55c75;
+}
+
+li.editando {
+  background-color: #aca8ec !important;
+  color: #fff !important;
+}
+li.editando span.valor,
+li.editando button {
+  color: #fff !important;
+  opacity: 0.9 !important;
+}
+
+/* ==== TOTAL ==== */
+.total {
+  font-weight: bold;
+  font-size: 1.35rem;
+  text-align: center;
+  margin-top: 18px;
+  color: #1f1b2e;
+}
+
+body.dark-theme .total {
+  color: #eae7ff;
+}

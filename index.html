@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestão de Despesas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="top-bar">
+        <div class="data-hora" id="data-hora-atual"></div>
+        <div id="weather"></div>
+      </div>
+
+      <header>
+        <h1>💸 Minhas Despesas</h1>
+        <button id="theme-toggle">🌛</button>
+      </header>
+
+      <section class="form-section">
+        <form id="form-despesa">
+          <input
+            type="text"
+            name="descricao"
+            placeholder="Descrição"
+            required
+          />
+          <input
+            type="number"
+            name="valor"
+            placeholder="Valor (€)"
+            step="0.01"
+            required
+          />
+          <select name="categoria" required>
+            <option value="">Categoria</option>
+            <option value="alimentacao">🍔 Alimentação</option>
+            <option value="transporte">🚌 Transporte</option>
+            <option value="entreterimento">🎮 Entreterimento</option>
+            <option value="compras">🛍️ Compras</option>
+            <option value="contas">💡 Contas</option>
+            <option value="saude">💊 Saúde</option>
+            <option value="outros">✨ Outros</option>
+          </select>
+          <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="filtro">
+          <label for="filtroCategoria">Filtrar por categoria:</label>
+          <select id="filtroCategoria">
+            <option value="">Todas</option>
+            <option value="alimentacao">🍔 Alimentação</option>
+            <option value="transporte">🚌 Transporte</option>
+            <option value="entreterimento">🎮 Entreterimento</option>
+            <option value="compras">🛍️ Compras</option>
+            <option value="contas">💡 Contas</option>
+            <option value="saude">💊 Saúde</option>
+            <option value="outros">✨ Outros</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="lista-section">
+        <ul id="lista-despesas"></ul>
+
+        <div class="total">Total: <span id="totalDespesas">€ 0.00</span></div>
+      </section>
+    </div>
+  </body>
+</html>
