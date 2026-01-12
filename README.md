@@ -27,6 +27,14 @@ The app allows users to add, edit, delete, and filter expenses by category, with
 
 ---
 
+## 🎬 Application Demo
+
+<p align="center">
+  <img src="Assets/appMobileMockup.png" width="700" />
+</p>
+
+---
+
 ## 👨‍💻 Author
 
 Developed by Sandro Draeger
