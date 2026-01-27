@@ -39,7 +39,3 @@ The app allows users to add, edit, delete, and filter expenses by category, with
 
 Developed by Sandro Draeger
 Project created for study and portfolio purposes.
-
----
-
-⭐ If you liked this project, feel free to give it a star!
